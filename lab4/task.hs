@@ -23,9 +23,9 @@ insertMap k v (NodeMap key value left right)
 
 
 -- 1. Data.Map  size :: Map k a -> Int Возвращает количество элементов в Map
-mySizeSet :: Set a -> Int
-mySizeSet Empty = 0
-mySizeSet (Node _ left right) = 1 + mySizeSet left + mySizeSet right
+sizeSet :: Set a -> Int
+sizeSet Empty = 0
+sizeSet (Node _ left right) = 1 + sizeSet left + sizeSet right
 
 mySizeSetTests :: IO()
 mySizeSetTests = do
